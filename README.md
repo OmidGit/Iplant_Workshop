@@ -2,3 +2,5 @@
 This is an introduction to GitHub - IPlant Workshop
 
 Version Control Workshop
+
+Stop singing
