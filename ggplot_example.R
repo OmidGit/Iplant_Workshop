@@ -42,3 +42,27 @@ library(MASS)
 head(birthwt)
 myplot <- ggplot(birthwt, aes(factor(race), bwt)) + geom_boxplot()
 summary(myplot)
+
+# adding facets
+ggplot(data = iris, aes(x = Sepal.Length, 
+                        y = Sepal.Width, 
+                        color = Species)) + 
+  geom_point() +
+  facet_grid(Species ~ .)
+
+# different order of facet
+ggplot(data = iris, aes(x = Sepal.Length, 
+                        y = Sepal.Width, 
+                        color = Species)) + 
+  geom_point() +
+  facet_grid(. ~ Species)
+
+# using facet_wrap
+ggplot(data = iris, aes(x = Sepal.Length, 
+                        y = Sepal.Width, 
+                        color = Species)) + 
+  geom_point() +
+  facet_wrap(~ Species)   # no .  when wrap is used
+
+
+
