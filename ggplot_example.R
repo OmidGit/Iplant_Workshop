@@ -40,5 +40,5 @@ ggplot(data = d2, aes(x = carat,
 # the following library is from a textbook
 library(MASS)
 head(birthwt)
-ggplot(birthwt, aes(factor(race), bwt)) + geom_boxplot()
-
+myplot <- ggplot(birthwt, aes(factor(race), bwt)) + geom_boxplot()
+summary(myplot)
